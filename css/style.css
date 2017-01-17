@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sacramento");
+body {
+  background: #00BEBE;
+  font-family: Sacramento;
+}
+body .title {
+  text-align: center;
+  font-size: 80px;
+  padding: 10% 5% 5%;
+}
+@media screen and (max-width: 500px) {
+  body .title {
+    font-size: 50px;
+  }
+}
+body .sub {
+  position: relative;
+  font-family: 'Open Sans Condensed';
+  font-size: 20px;
+  display: block;
+}
+body .sub::before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+}
+@media screen and (max-width: 500px) {
+  body .sub::before {
+    top: -5px;
+  }
+}
+body svg {
+  max-width: 80%;
+}
+body svg #bulb {
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+  -webkit-animation: float 3s linear alternate infinite;
+          animation: float 3s linear alternate infinite;
+}
+body svg #cord {
+  -webkit-animation: skew 3s linear alternate infinite;
+          animation: skew 3s linear alternate infinite;
+  -webkit-transform-origin: center bottom;
+          transform-origin: center bottom;
+}
+
+.highlight #path_ear_dx,
+.highlight #path_ear_sx,
+.highlight #path_ear_cx,
+.highlight #path_inner {
+  fill: #FFEC8B;
+}
+
+@-webkit-keyframes float {
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+
+@keyframes float {
+  50% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+@-webkit-keyframes skew {
+  50% {
+    -webkit-transform: skew(1deg);
+            transform: skew(1deg);
+  }
+}
+@keyframes skew {
+  50% {
+    -webkit-transform: skew(1deg);
+            transform: skew(1deg);
+  }
+}
